@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+}
+
+th{
+    background-color: #EEE;
+  
+}
+
+th div {
+    margin: 5px;
+}
+
+
+.flex {
+    flex: 1;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.item {
+	margin: 10px;
+}
+
+.container {
+	margin: 10 auto;
+	display: flex;
+}
+
+
+.mat-row:nth-child(even){
+    background-color: #EEE;
+}
+        
+.mat-row:nth-child(odd){
+    background-color: #FFF;
+}

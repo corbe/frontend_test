@@ -1,0 +1,52 @@
+table {
+    width: 100%;
+}
+
+th{
+    background-color: #EEE;
+}
+
+
+.flex {
+    flex: 1;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.item {
+	margin: 10px;
+}
+
+.container {
+	margin: 10 auto;
+	display: flex;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+
+
+h3 {
+    font-weight: 100;
+}
+
+mat-form-field.mat-form-field {
+  width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.mat-row:nth-child(even){
+    background-color: #EEE;
+}
+        
+.mat-row:nth-child(odd){
+    background-color: #FFF;
+}

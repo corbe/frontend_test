@@ -1,0 +1,64 @@
+ul{
+    list-style: none;
+}
+
+a{
+    color: #0352fc;
+    text-decoration: none;
+}
+
+mat-drawer {
+  width: 200px;
+}
+
+
+mat-toolbar{
+    background-color: #45474d; 
+    color: #FFF
+}
+
+
+table {
+    width: 100%;
+}
+
+th{
+    background-color: #EEE;
+}
+
+
+.flex {
+    flex: 1;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.item {
+	margin: 10px;
+}
+
+.container {
+	margin: 10 auto;
+	display: flex;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+
+
+h3 {
+    font-weight: 100;
+}
+
+mat-form-field.mat-form-field {
+  width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+

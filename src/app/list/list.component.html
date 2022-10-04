@@ -1,0 +1,73 @@
+<section class="container">
+	<div class="item flex">
+    <div>
+      <h5>List movies</h5>
+    </div>
+
+    <div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="year">
+          <th mat-header-cell *matHeaderCellDef>
+            <div>
+              Year
+            </div>
+            <div>
+              <mat-form-field class="filter" floatLabel="never">
+                <mat-label>Search</mat-label>
+                <input matInput [formControl]="yearFilter">
+              </mat-form-field>
+            </div>
+          </th>
+          <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef> Title </th>
+          <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="winner">
+          <th mat-header-cell *matHeaderCellDef>
+            <div>
+              Winner
+            </div>
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label>Yes/No</mat-label>
+                <mat-select [formControl]="winnerFilter"> 
+                  <mat-option>Yes/No</mat-option>
+                  <mat-option *ngFor="let isWinner of isWinnerOptions" [value]="isWinner.key">{{isWinner.value}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </th>
+          <td mat-cell *matCellDef="let element">
+            <span *ngIf="element.winner">Yes</span>
+            <span *ngIf="!element.winner">No</span>
+            
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+
+
+      <mat-paginator #paginator [length]="totalRows" [pageIndex]="currentPage" [pageSize]="pageSize"
+                     [pageSizeOptions]="pageSizeOptions" (page)="pageChanged($event)" aria-label="Select page">
+      </mat-paginator>
+
+    </div>
+  </div>
+</section>
